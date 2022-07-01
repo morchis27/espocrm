@@ -1,0 +1,22 @@
+{
+    "menu": {
+        "detail": {
+            "buttons": [
+                "__APPEND__",
+                {
+                    "label": "Print Doc",
+                    "name": "PrintOpportunityDoc",
+                    "action": "PrintOpportunityDoc",
+                    "style": "primary",
+                    "aclScope": "Opportunity",
+                    "data": {
+                        "handler": "custom:print-opportunity-doc"
+                    },
+                    "initFunction": "initPrintOpportunityDoc"
+                }
+            ]
+        }
+
+    }
+}
+
