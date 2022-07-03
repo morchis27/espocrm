@@ -1,0 +1,9 @@
+{
+    "params": [
+        {
+            "name": "stage",
+            "type": "array",
+            "view": "views/fields/stage"
+        }
+    ]
+}
