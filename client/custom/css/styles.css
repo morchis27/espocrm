@@ -1,45 +1,29 @@
 .progressbar {
-    margin: 50px 0 50px 0;
-    counter-reset: step;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 13px;
+}
+.progressbar-item {
+    height: 5px;
+    width: 100%;
+    margin: 0 4px 0 0;
+    background-color: #e0e0e0;
 }
 
-.progressbar li {
-    list-style-type: none;
-    width: 20%;
-    float: left;
-    font-size: 12px;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    color: #7d7d7d;
+.progressbar .active {
+    background-color: #efc173;
+}
+.progressbar-name {
+    overflow: hidden;
+    font-size: 1.2em;
 }
 
-.progressbar li:before {
-    width: 100px;
-    height: 10px;
-    content: '';
-    line-height: 30px;
-    border: 2px solid #7d7d7d;
-    background-color: #7d7d7d;
-    display: block;
-    text-align: center;
-    margin: 0 auto 10px auto;
-    transition: all .8s;
-}
-
-.progressbar li.active:before {
-    border-color: #55b776;
-    background-color: #55b776;
-    transition: all .8s;
-}
-
-.progressbar li.lost:before {
-    border-color: #aa4141;
-    background-color: #aa4141;
-    transition: all .8s;
-}
-
-body {
-    background-color: #333333;
+.progressbar-block {
+    margin-top: 20px;
 }
 

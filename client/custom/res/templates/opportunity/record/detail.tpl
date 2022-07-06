@@ -1,22 +1,10 @@
-<div class="detail" id="{{id}}" data-scope="{{scope}}">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <ul id="progressbar" class="progressbar">
-                    <li>Prospecting</li>
-                    <li>Qualification</li>
-                    <li>Proposal</li>
-                    <li>Negotiation</li>
-                    <li>Closed Won</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<div class="detail" id="{{id}}" data-scope="{{scope}} ">
+
     {{#unless buttonsDisabled}}
     <div class="detail-button-container button-container record-buttons clearfix">
         <div class="btn-group actions-btn-group" role="group">
             {{#each buttonList}}
-                {{button name scope=../entityType label=label style=style hidden=hidden html=html className='btn-xs-wide'}}
+            {{button name scope=../entityType label=label style=style hidden=hidden html=html className='btn-xs-wide'}}
             {{/each}}
             {{#if dropdownItemList}}
             <button
@@ -30,17 +18,17 @@
                 <li
                     class="{{#if hidden}}hidden{{/if}}"
                 ><a
-                    href="javascript:"
-                    class="action"
-                    data-action="{{name}}"
-                    {{#each data}} data-{{@key}}="{{./this}}"{{/each}}
-                >{{#if html}}{{{html}}}{{else}}{{translate label scope=../entityType}}{{/if}}</a></li>
+                        href="javascript:"
+                        class="action"
+                        data-action="{{name}}"
+                            {{#each data}} data-{{@key}}="{{./this}}"{{/each}}
+                    >{{#if html}}{{{html}}}{{else}}{{translate label scope=../entityType}}{{/if}}</a></li>
                 {{else}}
-                    {{#unless @first}}
-                    {{#unless @last}}
-                    <li class="divider"></li>
-                    {{/unless}}
-                    {{/unless}}
+                {{#unless @first}}
+                {{#unless @last}}
+                <li class="divider"></li>
+                {{/unless}}
+                {{/unless}}
                 {{/if}}
                 {{/each}}
             </ul>
@@ -57,46 +45,65 @@
                 >
                     <span class="fas fa-chevron-left"></span>
                 </button>
-                <button type="button" class="btn btn-text btn-icon action {{#unless nextButtonEnabled}} disabled{{/unless}}" data-action="next" title="{{translate 'Next Entry'}}">
+                <button type="button"
+                        class="btn btn-text btn-icon action {{#unless nextButtonEnabled}} disabled{{/unless}}"
+                        data-action="next" title="{{translate 'Next Entry'}}">
                     <span class="fas fa-chevron-right"></span>
                 </button>
             </div>
         </div>
         {{/if}}
     </div>
+    <div class=" clearfix">
+        <div class="row">
+            <div class="progressbar-block cell col-sm-12 col-md-6 col-lg-2 form-group">
+                <p class="progressbar-name" id="progressbar-name"></p>
+
+                <div class="progressbar" id="progressbar">
+                    <div class="progressbar-item"></div>
+                    <div class="progressbar-item"></div>
+                    <div class="progressbar-item"></div>
+                    <div class="progressbar-item"></div>
+                    <div class="progressbar-item"></div>
+                    <div class="progressbar-item"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div class="detail-button-container button-container edit-buttons hidden clearfix">
         <div class="btn-group actions-btn-group" role="group">
-        {{#each buttonEditList}}
-        {{button name scope=../entityType label=label style=style hidden=hidden html=html className='btn-xs-wide'}}
-        {{/each}}
-        {{#if dropdownEditItemList}}
-        <button
-            type="button"
-            class="btn btn-default dropdown-toggle dropdown-edit-item-list-button{{#if dropdownEditItemListEmpty}} hidden{{/if}}"
-            data-toggle="dropdown"
-        ><span class="fas fa-ellipsis-h"></span></button>
-        <ul class="dropdown-menu pull-left">
-            {{#each dropdownEditItemList}}
-            {{#if this}}
-            <li
-                class="{{#if hidden}}hidden{{/if}}"
-            >
-                <a
-                    href="javascript:"
-                    class="action"
-                    data-action="{{name}}"
-                >{{#if html}}{{{html}}}{{else}}{{translate label scope=../entityType}}{{/if}}</a>
-            </li>
-            {{else}}
+            {{#each buttonEditList}}
+            {{button name scope=../entityType label=label style=style hidden=hidden html=html className='btn-xs-wide'}}
+            {{/each}}
+            {{#if dropdownEditItemList}}
+            <button
+                type="button"
+                class="btn btn-default dropdown-toggle dropdown-edit-item-list-button{{#if dropdownEditItemListEmpty}} hidden{{/if}}"
+                data-toggle="dropdown"
+            ><span class="fas fa-ellipsis-h"></span></button>
+            <ul class="dropdown-menu pull-left">
+                {{#each dropdownEditItemList}}
+                {{#if this}}
+                <li
+                    class="{{#if hidden}}hidden{{/if}}"
+                >
+                    <a
+                        href="javascript:"
+                        class="action"
+                        data-action="{{name}}"
+                    >{{#if html}}{{{html}}}{{else}}{{translate label scope=../entityType}}{{/if}}</a>
+                </li>
+                {{else}}
                 {{#unless @first}}
                 {{#unless @last}}
                 <li class="divider"></li>
                 {{/unless}}
                 {{/unless}}
+                {{/if}}
+                {{/each}}
+            </ul>
             {{/if}}
-            {{/each}}
-        </ul>
-        {{/if}}
         </div>
     </div>
     {{/unless}}
@@ -108,7 +115,7 @@
             <div class="bottom">{{{bottom}}}</div>
         </div>
         <div class="side">
-        {{{side}}}
+            {{{side}}}
         </div>
     </div>
 </div>

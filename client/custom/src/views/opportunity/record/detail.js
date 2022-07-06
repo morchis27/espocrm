@@ -12,15 +12,10 @@ Espo.define('custom:views/opportunity/record/detail', 'views/record/detail', fun
         afterRender: function () {
             Dep.prototype.afterRender.call(this);
             this.ul = this.$el.find(".progressbar");
+            let stageName = document.querySelector(".progressbar-name")
+            stageName.textContent = this.attributes.stage;
             for (let i = 0; i <= this.stages.indexOf(`${this.attributes.stage}`); i++) {
-                this.ul.find('li:not(.active):first').addClass("active");
-            }
-            console.log(this.ul.find("li:before"));
-            if (this.attributes.stage === "Closed Lost") {
-                Array.from(this.ul.children()).forEach(child => {
-                    child.classList.remove("active");
-                    child.classList.add("lost");
-                });
+                this.ul.find('div:not(.active):first').addClass("active");
             }
         }
 
