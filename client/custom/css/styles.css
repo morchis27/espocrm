@@ -1,0 +1,29 @@
+.progressbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 13px;
+}
+.progressbar-item {
+    height: 5px;
+    width: 100%;
+    margin: 0 4px 0 0;
+    background-color: #e0e0e0;
+}
+
+.progressbar .active {
+    background-color: #efc173;
+}
+.progressbar-name {
+    overflow: hidden;
+    font-size: 1.2em;
+}
+
+.progressbar-block {
+    margin-top: 20px;
+}
+
