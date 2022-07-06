@@ -1,0 +1,11 @@
+[
+    {
+        "route": "/print-opportunity-doc/",
+        "method": "get",
+        "params": {
+            "controller": "MyController",
+            "action": "printOpportunityDoc"
+        }
+    }
+
+]
