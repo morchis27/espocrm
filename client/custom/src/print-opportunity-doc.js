@@ -4,12 +4,12 @@ define('custom:print-opportunity-doc', ['action-handler'], function (Dep) {
 
         actionPrintOpportunityDoc: function (data, e) {
             window.open("https://espo.loc/api/v1/Attachment/file/62bda6bae041af08b")
-            Espo.Ajax
-                .getRequest(`print-opportunity-doc/`)
-                .then(response => {
-                    if (response)
-                        console.log(response);
-                });
+            // Espo.Ajax
+            //     .getRequest(`print-opportunity-doc/`)
+            //     .then(response => {
+            //         if (response)
+            //             console.log(response);
+            //     });
 
         },
 

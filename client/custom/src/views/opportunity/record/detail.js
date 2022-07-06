@@ -6,7 +6,6 @@ Espo.define('custom:views/opportunity/record/detail', 'views/record/detail', fun
         setup: function () {
             this.stages = ["Prospecting", "Qualification", "Proposal", "Negotiation", "Closed Won", "Closed Lost"];
             Dep.prototype.setup.call(this);
-            console.log(this);
         },
 
         afterRender: function () {
