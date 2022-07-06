@@ -1,38 +1,11 @@
 [
     {
-        "route": "/mytest/",
+        "route": "/print-opportunity-doc/",
         "method": "get",
         "params": {
             "controller": "MyController",
-            "action": "test",
-            "id": ":id"
+            "action": "printOpportunityDoc"
         }
-    },
-    {
-        "route": "/mytest2/",
-        "method": "get",
-        "params": {
-            "controller": "MyController",
-            "action": "test2",
-            "id": ":id"
-        }
-    },
-    {
-        "route": "/HelloWorld/:name",
-        "method": "post",
-        "params": {
-            "controller": "MyController",
-            "action": "helloWorld",
-            "name": ":name"
-        }
-    },
-    {
-        "route": "/TestNoAuth",
-        "method": "get",
-        "params": {
-            "controller": "Test",
-            "action": "test"
-        },
-        "noAuth": true
     }
+
 ]

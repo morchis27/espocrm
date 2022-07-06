@@ -17,31 +17,26 @@ class MyController
     }
 
 
-    public function getActionTest()
+    public function getActionPrintOpportunityDoc()
     {
-        $filename = md5(rand(0, 100));
-        $client = $this->authenticateClient();
+        $filename="HelloWorld.docx";
         $phpWord = new PhpWord();
         $section = $phpWord->addSection();
         $section->addText(
-            '"Learn from yesterday, live for today, hope for tomorrow. '
-            . 'The important thing is not to stop questioning." '
-            . '(Albert Einstein)'
+            'text'
         );
+        header("Content-Description: File Transfer");
+        header('Content-Disposition: attachment; filename="' . $filename . '"');
+        header('Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+        header('Content-Transfer-Encoding: binary');
+        header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+        header('Expires: 0');
         $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
         try {
-            $objWriter->save('custom/Espo/Custom/Controllers/' . $filename . ".docx");
+            $objWriter->save("php://output");
         } catch (\Throwable $exception) {
             echo $exception->getMessage();
             die();
         }
-    }
-
-    public function authenticateClient()
-    {
-        $client = new EspoApiClient('http://espo.loc');
-        $client->setApiKey('542d2865a09f63c81a46c6cb667a64ab');
-        $client->setSecretKey('0867e43768888595787ba98845c3de7d');
-        return $client;
     }
 }
