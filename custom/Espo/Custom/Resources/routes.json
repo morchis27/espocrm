@@ -1,10 +1,11 @@
 [
     {
-        "route": "/print-opportunity-doc/",
+        "route": "/print-opportunity-doc/:opportunityName",
         "method": "get",
         "params": {
-            "controller": "MyController",
-            "action": "printOpportunityDoc"
+            "controller": "OpportunityExtensionController",
+            "action": "printOpportunityDoc",
+            "opportunityName": ":opportunityName"
         }
     }
 

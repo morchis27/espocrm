@@ -2,7 +2,6 @@
     "menu": {
         "detail": {
             "buttons": [
-                "__APPEND__",
                 {
                     "label": "Print Doc",
                     "name": "PrintOpportunityDoc",
