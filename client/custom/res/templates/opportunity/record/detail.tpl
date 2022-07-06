@@ -58,14 +58,13 @@
         <div class="row">
             <div class="progressbar-block cell col-sm-12 col-md-6 col-lg-2 form-group">
                 <p class="progressbar-name" id="progressbar-name"></p>
-
-                <div class="progressbar" id="progressbar">
-                    <div class="progressbar-item"></div>
-                    <div class="progressbar-item"></div>
-                    <div class="progressbar-item"></div>
-                    <div class="progressbar-item"></div>
-                    <div class="progressbar-item"></div>
-                    <div class="progressbar-item"></div>
+                <div class="progressbar">
+                    <div class="progressbar-item">&nbsp;</div>
+                    <div class="progressbar-item">&nbsp;</div>
+                    <div class="progressbar-item">&nbsp;</div>
+                    <div class="progressbar-item">&nbsp;</div>
+                    <div class="progressbar-item">&nbsp;</div>
+                    <div class="progressbar-item">&nbsp;</div>
                 </div>
 
             </div>
